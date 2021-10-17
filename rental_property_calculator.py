@@ -121,7 +121,7 @@ rental = rentalCalculator([],[],[])
 
 
 def runCalculator():
-    print("Welcome to the Awesome ROI Calculator!")
+    print("Welcome to the ROI Calculator!")
     print('\nIn order to calculate the ROI of your rental property, please enter your monthly income amounts, your monthly expenses, and the total amount invested into your property!')
     while True:
         user_input = input('What would you like to do? \n"Add Income" to add monthly income amounts\n"Add Expense" to add monthly expenses\n"Add Investment Amount" to add the total amount invested in the property\n"See Cashflow" to view your cashflow\n"Calculate ROI" to view your final ROI: \n"Quit" to exit ')
