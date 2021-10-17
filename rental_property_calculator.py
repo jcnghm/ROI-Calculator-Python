@@ -1,18 +1,6 @@
-# ROI Rental Property Calculator Project
+# ROI Rental Property Calculator
 
-
-# Instructions:
-
-    # Follow the prompts to navigate through the input process,  the program needs to collect your income, expenses, and investment items and
-    # total for your property.  
-    # 
-    # Once collected, the program will total your income/expenses in a yearly and monthly amount and give you
-    # an itemized list of each item pertaining to income and expenses. It will also total and give you an itemized list of investments.
-
-    # After inputting all of this information you can see your monthly and yearly cash flow and then calculate your ROI.
-
-
-
+# The calculator accepts all sorts of inputs including: payments, expences, and capital investments.
 
 class rentalCalculator():
 
@@ -56,7 +44,7 @@ class rentalCalculator():
                 expense_amount = int(input('\nInput the $/month amount: ')) * 12
                 self.expenses.append(expense_amount)
                 itemized_expenses.append([expense_item, expense_amount])
-            elif expense_item.lower() == 'property tax': 
+            elif expense_item.lower() == 'property tax': # All of the property tax rates by state
                 tax_rates = {'hi':0.0028, 'al':0.0041, 'co':0.0051, 'la':0.0055, 'dc':0.0056, 'sc':0.0057, 'de':0.0057, 'wv':0.0058, 'nv':0.006, 'wy':0.0061, 
                 'ar':0.0062, 'ut':0.0063, 'az':0.0066, 'id':0.0069, 'tn':0.0071, 'ca':0.0076, 'nm':0.008, 'ms':0.0081, 'va':0.0082, 'mt':0.0084, 'nc':0.0084,
                 'in':0.0085, 'ky':0.0086, 'fl':0.0089, 'ok':0.009, 'ga':0.0092, 'mo':0.0097, 'or':0.0097, 'nd':0.0098, 'wa':0.0098, 'md':0.0109, 'mn':0.0112,
@@ -124,7 +112,7 @@ class rentalCalculator():
             total_roi = ((sum(self.income) - sum(self.expenses))/sum(self.investment))*100
             print('\nYour total ROI: ')
             print(f'{total_roi}%')
-            print("\nThank you for using our App!")
+            print("\nThank you! Goodbye.")
         else:
             print('You need to complete the Investment section before continuing!')
      
@@ -149,7 +137,7 @@ def runCalculator():
             rental.calcRoi()
             break
         elif user_input.lower() == 'quit':
-            print('\nThank you for using our App!')
+            print('\nThank you! Goodbye.')
             break       
                     
 runCalculator()
